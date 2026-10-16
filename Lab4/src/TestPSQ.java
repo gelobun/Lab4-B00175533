@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class TestPSQ {
+	private static int front;
+	private static int back;
 	
 	public static void displayMenu() {
 		System.out.println("Welcome to PrintServer! Please select a number from the list.");
@@ -18,6 +20,7 @@ public class TestPSQ {
 		Scanner input = new Scanner(System.in);
 		
 		int response;
+		Object qFront;
 		
 	
 		q.enqueue(1);
@@ -26,6 +29,14 @@ public class TestPSQ {
 		q.enqueue(4);
 		q.enqueue(5);
 		q.enqueue(6);
+		
+		qFront = q.peek();
+		qFront = q.dequeue();
+		
+		System.out.println(qFront);
+		System.out.println(qFront);
+		
+		
 		
 		System.out.println("Dequeued num: " + q.dequeue());
 		System.out.println("Front num: " + q.peek());
@@ -64,6 +75,8 @@ public class TestPSQ {
 			
 			
 		} while (response != 6);
+		
+		
 		
 		
 	
